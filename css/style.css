@@ -1,0 +1,98 @@
+@charset "UTF-8";
+/* style som bliver anvendt på hele siden */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  color: #161616;
+}
+
+body {
+  background-color: #FBC100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  text-align: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}
+section h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+}
+section p {
+  font-size: 1.2em;
+  padding: 1em 2em;
+  max-width: 800px;
+}
+section p:first-of-type {
+  text-align: left;
+}
+section img {
+  height: 450px;
+}
+
+section:not(:first-of-type) {
+  display: none;
+}
+
+/* div til at holde frem og tilbage knapper */
+div {
+  margin: 0.5em 15px 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Knap til svarmulighed */
+.answer {
+  font-size: 1em;
+  width: 300px;
+  margin: 12px 0;
+  padding: 10px 5px;
+  font-family: "Inter", sans-serif;
+  background-color: #FFFFFC;
+  border-radius: 1rem;
+  border: 1px solid #161616;
+  transition: 0.7s;
+  text-decoration: none;
+}
+
+/* hovereffect til knapperne på siden */
+button:hover, a:hover {
+  background-color: #014397;
+  color: #FFFFFC;
+  border: 1px solid #FFFFFC;
+  transition: 0.7s;
+}
+
+/* Media query til mobil */
+@media screen and (max-width: 800px) {
+  section h2 {
+    font-size: 1.8;
+  }
+  section p {
+    width: 100vw;
+  }
+  section button {
+    margin-top: 1em 5px 0 15px;
+  }
+  section img {
+    height: 350px;
+  }
+}/*# sourceMappingURL=style.css.map */
