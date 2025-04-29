@@ -37,6 +37,16 @@ section p {
 section p:first-of-type {
   text-align: left;
 }
+section #fb1 {
+  display: none;
+  text-align: center;
+  background-color: #5A002C;
+  margin: 1em;
+  border-radius: 1rem;
+  border: 1px solid #FFFFFC;
+  transition: 0.7s;
+  color: #FFFFFC;
+}
 section img {
   max-height: 450px;
   width: 450px;
@@ -90,13 +100,17 @@ button:hover, a:hover {
     font-size: 1.8;
   }
   section p {
-    width: 100vw;
+    width: 90vw;
+    padding: 8px 16px;
+  }
+  section #fb1 {
+    width: 95vw;
   }
   section button {
     margin-top: 1em 5px 0 15px;
   }
   section img {
-    max-width: 350px;
+    width: 350px;
     max-height: 350px;
   }
 }/*# sourceMappingURL=style.css.map */

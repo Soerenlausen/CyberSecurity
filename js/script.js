@@ -24,7 +24,9 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         break;
         case 'a2-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e1"
         break;
-        case 'a1-1': document.querySelector('#e3').style.display = 'flex'; // Viser elementet med id="q2"
+        case 'a1-1': document.querySelector('#e3').style.display = 'flex';
+        document.querySelector('#fb1').style.display = 'flex';
+        document.getElementById('fb1').innerText = 'Du skal altid check hvem der skriver, er mailaddressen den rigtige eller mailen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2"
         break;
         case 'a1-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e1"
         break;

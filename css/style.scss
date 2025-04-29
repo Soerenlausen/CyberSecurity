@@ -1,5 +1,6 @@
 $primary-color: #FBC100;
 $hover-color: #2e667c;
+$ups-color: #5A002C;
 $primary-font-color: #161616;
 $secondary-font-color: #FFFFFC;
 $heading-font: 'Raleway', sans-serif;
@@ -48,6 +49,17 @@ section{
         text-align: left;
     }
 
+    #fb1{
+        display: none;
+        text-align: center;
+        background-color: $ups-color;
+        margin: 1em;
+        border-radius: $border-radius;
+        border: 1px solid $secondary-font-color;
+        transition: 0.7s;
+        color: $secondary-font-color;
+    }
+
     img{
         max-height: 450px;
         width: 450px;
@@ -81,7 +93,7 @@ button{
     padding: 10px 5px;
     font-family: $paragraph-font;
     background-color: $secondary-font-color;
-    border-radius: 1rem;
+    border-radius: $border-radius;
     border: 1px solid $primary-font-color;
     transition: 0.7s;
     text-decoration: none;
@@ -105,7 +117,12 @@ section{
     }
     
     p{
-        width: 100vw;
+        width: 90vw;
+        padding: 8px 16px;
+    }
+
+    #fb1{
+        width: 95vw;
     }
 
     button{
@@ -113,7 +130,7 @@ section{
     }
 
     img{
-        max-width: 350px;
+        width: 350px;
         max-height: 350px;
     }
 
