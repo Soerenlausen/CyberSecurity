@@ -25,7 +25,7 @@ section {
   align-items: center;
   height: 100dvh;
 }
-section h2 {
+section h1 {
   font-family: "Raleway", sans-serif;
   font-size: 2em;
 }
@@ -38,7 +38,10 @@ section p:first-of-type {
   text-align: left;
 }
 section img {
-  height: 450px;
+  max-height: 450px;
+  width: 450px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 section:not(:first-of-type) {
@@ -75,7 +78,7 @@ button {
 
 /* hovereffect til knapperne på siden */
 button:hover, a:hover {
-  background-color: #014397;
+  background-color: #2e667c;
   color: #FFFFFC;
   border: 1px solid #FFFFFC;
   transition: 0.7s;
@@ -83,7 +86,7 @@ button:hover, a:hover {
 
 /* Media query til mobil */
 @media screen and (max-width: 800px) {
-  section h2 {
+  section h1 {
     font-size: 1.8;
   }
   section p {
@@ -93,6 +96,7 @@ button:hover, a:hover {
     margin-top: 1em 5px 0 15px;
   }
   section img {
-    height: 350px;
+    max-width: 350px;
+    max-height: 350px;
   }
 }/*# sourceMappingURL=style.css.map */

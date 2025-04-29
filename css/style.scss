@@ -1,8 +1,5 @@
 $primary-color: #FBC100;
-$hover-color: #014397;
-$footer-color: #002D65;
-$wrong-color: #970101;
-$right-color: #019715;
+$hover-color: #2e667c;
 $primary-font-color: #161616;
 $secondary-font-color: #FFFFFC;
 $heading-font: 'Raleway', sans-serif;
@@ -36,7 +33,7 @@ section{
     align-items: center;
     height: 100dvh;
 
-    h2{
+    h1{
         font-family: $heading-font;
         font-size: 2em;
     }
@@ -52,7 +49,9 @@ section{
     }
 
     img{
-        height: 450px;
+        max-height: 450px;
+        width: 450px;
+        object-fit: contain;
     }
 }
 
@@ -101,7 +100,7 @@ button:hover, a:hover{
 
 section{
 
-    h2{
+    h1{
         font-size: 1.8;
     }
     
@@ -114,7 +113,8 @@ section{
     }
 
     img{
-        height: 350px;
+        max-width: 350px;
+        max-height: 350px;
     }
 
 }

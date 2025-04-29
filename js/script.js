@@ -12,6 +12,8 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
     choices.push(e.target.id) // gemmer id i choices
     console.log(choices)
     switch (e.target.id) { // Forholder sig til det klikkede elements id
+        case 's1': document.querySelector('#q1').style.display = 'flex'; // Viser elementet med id="q3"
+        break;
         case 'a1': document.querySelector('#q3').style.display = 'flex'; // Viser elementet med id="q3"
         break;
         case 'a2': document.querySelector('#q2').style.display = 'flex'; // Viser elementet med id="q2"
