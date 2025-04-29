@@ -4,7 +4,7 @@ const btns = document.querySelectorAll('.btn-group button');
 const choices = []; // Array til id på knappen, der er blevet klikket på
 const sections = document.querySelectorAll('section'); // fast variabel, som henter de forskellige sectioner(elementer) fra html'en udfra teksten 'section'
 
-// Function til at skift section frem og tilbage
+// Function til at skift sectio
 const checkAnswer = (e) => { // Funktion med en parameter (e)
     sections.forEach(section => {
         section.style.display = 'none';
@@ -26,7 +26,7 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         break;
         case 'a1-1': document.querySelector('#e3').style.display = 'flex';
         document.querySelector('#fb1').style.display = 'flex';
-        document.getElementById('fb1').innerText = 'Du skal altid check hvem der skriver, er mailaddressen den rigtige eller mailen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2"
+        document.getElementById('fb1').innerText = 'Du skal altid check hvem der skriver, er mailaddressen den rigtige eller mailen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
         break;
         case 'a1-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e1"
         break;
@@ -34,6 +34,6 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
     }
 }
 
-btns.forEach(btn => {
+btns.forEach(btn => { // for hver knap tilføjer den en event listener, som tjekker om der er blevet klikket på en knap og hvilken en.
     btn.addEventListener('click', checkAnswer);
 })
