@@ -1,25 +1,16 @@
-/* Variabler som bliver brugt en eller flere gang i scss'en */
-$primary-color: #FBC100;
-$hover-color: #2e667c;
-$ups-color: #5A002C;
-$primary-font-color: #161616;
-$secondary-font-color: #FFFFFC;
-$heading-font: 'Raleway', sans-serif;
-$paragraph-font: 'Inter', sans-serif;
-$padding-normal: 1em;
-$border-radius: 1rem;
+@use 'partial' /* henter partial filen */
 
 /* style som bliver anvendt på hele siden */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $paragraph-font;
-    color: $primary-font-color;
+    font-family: partial.$paragraph-font; /* bruger en tidligere defineret */
+    color: partial.$primary-font-color;
 }
 
 body{
-    background-color: $primary-color;
+    background-color: partial.$primary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,14 +26,12 @@ body{
 
 /* nesting som mindsker behovet for at skrive section før alle de underliggende elementer*/
 section{
-    display: flex;
-    flex-direction: column;
+    @include box;
     justify-content: center;
-    align-items: center;
     height: 100dvh;
 
     h1{
-        font-family: $heading-font;
+        font-family: partial.$heading-font;
         font-size: 2em;
     }
     
@@ -60,12 +49,12 @@ section{
     #fb1{
         display: none;
         text-align: center;
-        background-color: $ups-color;
+        background-color: partial.$ups-color;
         margin: 1em;
-        border-radius: $border-radius;
-        border: 1px solid $secondary-font-color;
+        border-radius: partial.$border-radius;
+        border: 1px solid partial.$secondary-font-color;
         transition: 0.7s;
-        color: $secondary-font-color;
+        color: partial.$secondary-font-color;
     }
 
     img{
@@ -82,10 +71,8 @@ section:not(:first-of-type){
 
 /* div til at holde frem og tilbage knapper */
 div{
+    @include box;
     margin: 0.5em 15px 0 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 button{
@@ -100,19 +87,19 @@ button{
     width: 300px;
     margin: 12px 0;
     padding: 10px 5px;
-    font-family: $paragraph-font;
-    background-color: $secondary-font-color;
-    border-radius: $border-radius;
-    border: 1px solid $primary-font-color;
+    font-family: partial.$paragraph-font;
+    background-color: partial.$secondary-font-color;
+    border-radius: partial.$border-radius;
+    border: 1px solid partial.$primary-font-color;
     transition: 0.7s;
     text-decoration: none;
 }
 
 /* hovereffect til knapperne på siden */
 button:hover, a:hover{
-    background-color: $hover-color;
-    color: $secondary-font-color;
-    border: 1px solid $secondary-font-color;
+    background-color: partial.$hover-color;
+    color: partial.$secondary-font-color;
+    border: 1px solid partial.$secondary-font-color;
     transition: 0.7s;
 }
 
