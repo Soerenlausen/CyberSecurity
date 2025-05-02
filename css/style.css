@@ -1,11 +1,12 @@
 @charset "UTF-8";
 /* Variabler som bliver brugt en eller flere gang i scss'en */
+/* mixin til gentagene stykker styling */
 /* style som bliver anvendt på hele siden */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* bruger en tidligere defineret */
   color: #161616;
 }
 
@@ -20,7 +21,7 @@ body {
 }
 
 /* Hvad gør du? tekst, fed skrift uden ekstra class'es eller inline styling */
-#q1 p:nth-of-type(2) {
+#q1 p:nth-of-type(2), #sc1, #sc2, #sc3 {
   font-weight: 700;
 }
 
@@ -28,8 +29,8 @@ body {
 section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100dvh;
   /* styling på id med .innerText element, fra javascript */
 }
@@ -69,10 +70,10 @@ section:not(:first-of-type) {
 
 /* div til at holde frem og tilbage knapper */
 div {
-  margin: 0.5em 15px 0 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0.5em 15px 0 15px;
 }
 
 button {

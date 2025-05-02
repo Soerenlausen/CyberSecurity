@@ -1,4 +1,4 @@
-@use 'partial' /* henter partial filen */
+@use 'partial';
 
 /* style som bliver anvendt på hele siden */
 *{
@@ -20,13 +20,13 @@ body{
 }
 
 /* Hvad gør du? tekst, fed skrift uden ekstra class'es eller inline styling */
-#q1 p:nth-of-type(2){
+#q1 p:nth-of-type(2), #sc1, #sc2, #sc3{
     font-weight: 700;
 }
 
 /* nesting som mindsker behovet for at skrive section før alle de underliggende elementer*/
 section{
-    @include box;
+    @include partial.box;
     justify-content: center;
     height: 100dvh;
 
@@ -71,7 +71,7 @@ section:not(:first-of-type){
 
 /* div til at holde frem og tilbage knapper */
 div{
-    @include box;
+    @include partial.box;
     margin: 0.5em 15px 0 15px;
 }
 

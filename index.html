@@ -14,46 +14,49 @@
         <h1>Test om e-mail svindel, og hvordan du måske kan undgå det</h1>
         <p>Lær mere om hvordan du ikke bliver snydt online med denne test.</p>
         <div class="btn-group">
-            <button class="answer" id="s1">Start test</button class="answer">
+            <button class="answer" id="start">Start test</button class="answer">
         </div>
     </section>
     <section id="q1">  <!-- section til det først spørgsmål -->
         <p>Du har lige modtaget en e-mail fra din bank, som beder dig oplyse dine kortoplysninger, ellers lukker de din konto og fryser dine penge på ubestemt tid.</p>
         <p>Hvad gør du?</p>
         <div class="btn-group">
-            <button class="answer" id="a1">Jeg skriver til dem og stiller spørgsmål</button class="answer">
-            <button class="answer" id="a2">Jeg stiller spørgsmål ved mailen, men giver dem mine kortoplysninger, da jeg ikke vil have at min konto bliver lukket</button class="answer">
-            <button class="answer" id="a3">Jeg sletter e-mailen</button class="answer">
+            <button class="answer" id=" svar 1">Jeg skriver til dem og stiller spørgsmål</button class="answer">
+            <button class="answer" id=" svar 2">Jeg stiller spørgsmål ved mailen, men giver dem mine kortoplysninger, da jeg ikke vil have at min konto bliver lukket</button class="answer">
+            <button class="answer" id=" svar 3">Jeg sletter e-mailen</button class="answer">
         </div>
     </section>
-    <section id="q2"> <!-- næste side til a2 -->
+    <section id="q2"> <!-- næste side til svar 2 -->
         <p>Din bank burde allerede vide dine kortoplysninger, samt burde de også kontakte dig via e-boks/digital post og ikke en normal e-mail</p>
         <div class="btn-group">
-        <button class="answer" id="a2-1">Men jeg vil ikke have at min konto bliver lukket</button class="answer">
-        <button class="answer" id="a2-2">Det giver vel god mening</button class="answer">
+        <button class="answer" id=" svar 2-1">Men jeg vil ikke have at min konto bliver lukket</button class="answer">
+        <button class="answer" id=" svar 2-2">Det giver vel god mening</button class="answer">
         </div>
     </section>
-    <section id="q3"> <!-- næste side til a1 -->
+    <section id="q3"> <!-- næste side til svar 1 -->
         <p>De svarer dig tilbage, at du nu skal sende et ekstra gebyr, gennem en mærkelig ucertificeret betalingsside, fordi du ikke handlede hurtigt nok</p>
         <div class="btn-group">
-        <button class="answer" id="a1-1">Jeg betaler dem</button class="answer">
-        <button class="answer" id="a1-2">Det er lidt for mærkeligt, jeg lader være med at sende penge samt kortoplysninger, og svarer ikke mere på mailen</button class="answer">
+        <button class="answer" id=" svar 1-1">Jeg betaler dem</button class="answer">
+        <button class="answer" id=" svar 1-2">Det er lidt for mærkeligt, jeg lader være med at sende penge samt kortoplysninger, og svarer ikke mere på mailen</button class="answer">
         </div>
     </section>
-    <section id="e1"> <!-- næste side til q1, a3 -->
+    <section id="e1"> <!-- næste side til q1, svar 3 -->
         <img src="img/scam_meme1.webp" alt="meme">
         <p>Du har styr på, hvordan du ikke bliver snydt online</p>
-        <a href="index.html" class="answer">Prøv igen?</a>
+        <p id="sc1"></p>
+        <a href="index.html" class="answer">Prøv igen?</a> <!-- reloader siden, så man kan vise dem, vejen de gik, i der forrige forsøg-->
     </section>
-    <section id="e2"> <!-- næste side til a1, a1-2 + a2-2 -->
+    <section id="e2"> <!-- næste side til svar 1, svar 1-2 + svar 2-2 -->
         <img src="img/scam_meme2.webp" alt="meme">
         <p>Du er ved at have styr på, hvordan du ikke bliver snydt online</p>
+        <p id="sc2"></p>
         <a href="index.html" class="answer">Prøv igen?</a>
     </section>
-    <section id="e3"> <!-- næste side til a1, a1-1 + a2-1 -->
+    <section id="e3"> <!-- næste side til svar 1, svar 1-1 + svar 2-1 -->
         <img src="img/scam_meme3.webp" alt="meme">
         <p id="fb1"></p>
         <p>Du skal vist øve dig lidt på, hvordan du ikke bliver snydt online</p>
+        <p id="sc3"></p>
         <a href="index.html" class="answer">Prøv igen?</a>
     </section>
 </body>
