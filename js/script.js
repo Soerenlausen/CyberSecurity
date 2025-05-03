@@ -1,10 +1,11 @@
 'use strict'
 
 const btns = document.querySelectorAll('.btn-group button');
+const startBtn = document.getElementById('start');
 const choices = []; // Array til id på knappen, der er blevet klikket på
 const sections = document.querySelectorAll('section'); // fast variabel, som henter de forskellige sectioner(elementer) fra html'en udfra teksten 'section'
 
-// Function til at skift sectio
+// Function til at skift section
 const checkAnswer = (e) => { // Funktion med en parameter (e)
     sections.forEach(section => {
         section.style.display = 'none';
@@ -27,7 +28,7 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         break;
         case ' svar 1-1': document.querySelector('#e3').style.display = 'flex';
         document.querySelector('#fb1').style.display = 'flex';
-        document.getElementById('fb1').innerText = 'Du skal altid check hvem der skriver, er mailaddressen den rigtige eller mailen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
+        document.getElementById('fb1').innerText = 'Du skal altid check hvem er afsenderen, er mailaddressen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
         break;
         case ' svar 1-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e2"
         break;
@@ -35,8 +36,18 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
     }
 }
 
+let count = localStorage.getItem('clickCount') || 0; // Henter nummer from localStorage eller 0 hvis intet er gemt tidligere
+
+startBtn.addEventListener('click', () => { // event listener til start knap, så starten på et nyt spil bliver registeret
+    count++; // tilføjer én til det gemte nummer i localStorage
+    
+    localStorage.setItem('clickCount', count); // gemmer det nye nummer i localStorage
+
+    document.getElementById('counter').innerText = 'Antal forsøg: ' + count; //sætter tekst og svar ind, i elementet med id'et 'start'
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    const savedChoices = localStorage.getItem('answer') || 'ikke registeret'; // henter tidligere svar fra localstorage, eller hvis det er første gang på side, giver det svaret 'ikke registeret' 
+    const savedChoices = localStorage.getItem('answer') || 'ikke registeret'; // henter tidligere svar fra localStorage, eller hvis det er første gang på side, giver det svaret 'ikke registeret' 
     document.getElementById('sc1').innerText = 'Forrige forsøg: ' + savedChoices; //sætter tekst og svar ind, i elementet med id'et 'sc1'
     document.getElementById('sc2').innerText = 'Forrige forsøg: ' + savedChoices;
     document.getElementById('sc3').innerText = 'Forrige forsøg: ' + savedChoices;

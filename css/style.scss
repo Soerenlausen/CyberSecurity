@@ -24,6 +24,10 @@ body{
     font-weight: 700;
 }
 
+#counter {
+    padding: partial.$padding-normal;
+}
+
 /* nesting som mindsker behovet for at skrive section før alle de underliggende elementer*/
 section{
     @include partial.box;
@@ -55,6 +59,7 @@ section{
         border: 1px solid partial.$secondary-font-color;
         transition: 0.7s;
         color: partial.$secondary-font-color;
+        font-size: 0.8em;
     }
 
     img{
