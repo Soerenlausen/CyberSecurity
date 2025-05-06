@@ -28,7 +28,7 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         break;
         case ' svar 1-1': document.querySelector('#e3').style.display = 'flex';
         document.querySelector('#fb1').style.display = 'flex';
-        document.getElementById('fb1').innerText = 'Du skal altid check hvem er afsenderen, er mailaddressen lidt mistænklig? og er det en nets certificret side, du betaler på' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
+        document.getElementById('fb1').innerText = 'Du skal altid check: hvem er afsenderen? er mailaddressen lidt mistænklig? er det en nets certificret side, du betaler på?' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
         break;
         case ' svar 1-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e2"
         break;
