@@ -21,17 +21,19 @@ body {
   text-align: center;
 }
 
-/* Hvad gør du? tekst, fed skrift uden ekstra class'es eller inline styling */
-#q1 p:nth-of-type(2), #sc1, #sc2, #sc3 {
-  font-weight: 700;
-}
-
 #q1 p:first-of-type, #q2 p:first-of-type, #q3 p:first-of-type {
   text-align: left;
 }
 
 #counter {
   padding: 1em;
+}
+
+#e3 p:nth-of-type(2) {
+  font-weight: 400;
+}
+#e3 p:nth-of-type(3) {
+  font-weight: 700;
 }
 
 /* nesting som mindsker behovet for at skrive section før alle de underliggende elementer*/
@@ -52,6 +54,9 @@ section p {
   font-size: 1em;
   padding: 1em 2em;
   max-width: 800px;
+}
+section p:nth-of-type(2) {
+  font-weight: 700;
 }
 section #fb1 {
   display: none;

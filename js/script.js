@@ -28,7 +28,7 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         break;
         case ' svar 1-1': document.querySelector('#e3').style.display = 'flex';
         document.querySelector('#fb1').style.display = 'flex';
-        document.getElementById('fb1').innerText = 'Du skal altid check: hvem er afsenderen? er mailaddressen lidt mistænklig? er det en nets certificret side, du betaler på?' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
+        document.getElementById('fb1').innerText = 'Du skal altid checke: hvem er afsenderen? er mailaddressen lidt mistænklig? er det en NETS certificret side, du betaler på?' // Viser elementet med id="q2", samt viser paragraph'en med id'et 'fb1' og indsætter teksten via .innerText functionen
         break;
         case ' svar 1-2': document.querySelector('#e2').style.display = 'flex'; // Viser elementet med id="e2"
         break;
@@ -45,13 +45,6 @@ startBtn.addEventListener('click', () => { // event listener til start knap, så
 
     document.getElementById('counter').innerText = 'Antal forsøg: ' + count; //sætter tekst og svar ind, i elementet med id'et 'start'
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-    const savedChoices = localStorage.getItem('answer') || 'ikke registeret'; // henter tidligere svar fra localStorage, eller hvis det er første gang på side, giver det svaret 'ikke registeret' 
-    document.getElementById('sc1').innerText = 'Forrige forsøg: ' + savedChoices; //sætter tekst og svar ind, i elementet med id'et 'sc1'
-    document.getElementById('sc2').innerText = 'Forrige forsøg: ' + savedChoices;
-    document.getElementById('sc3').innerText = 'Forrige forsøg: ' + savedChoices;
-})
 
 btns.forEach(btn => { // for hver knap tilføjer den en event listener, som tjekker om der er blevet klikket på en knap og hvilken en.
     btn.addEventListener('click', checkAnswer);

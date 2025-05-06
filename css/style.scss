@@ -20,11 +20,6 @@ body{
     text-align: center;
 }
 
-/* Hvad gør du? tekst, fed skrift uden ekstra class'es eller inline styling */
-#q1 p:nth-of-type(2), #sc1, #sc2, #sc3{
-    font-weight: 700;
-}
-
 #q1, #q2, #q3{
     p:first-of-type{
         text-align: left;
@@ -33,6 +28,15 @@ body{
 
 #counter {
     padding: partial.$padding-normal;
+}
+
+#e3{
+    p:nth-of-type(2){
+        font-weight: 400;
+    }
+    p:nth-of-type(3){
+        font-weight: 700;
+    }
 }
 
 /* nesting som mindsker behovet for at skrive section før alle de underliggende elementer*/
@@ -51,6 +55,10 @@ section{
         font-size: 1em;
         padding: 1em 2em;
         max-width: 800px;
+    }
+
+    p:nth-of-type(2){
+        font-weight: 700;
     }
 
 /* styling på id med .innerText element, fra javascript */
