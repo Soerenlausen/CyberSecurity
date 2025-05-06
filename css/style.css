@@ -64,7 +64,7 @@ section #fb1 {
   color: #FFFFFC;
 }
 section img {
-  max-height: 450px;
+  max-height: 425px;
   width: 450px;
   -o-object-fit: contain;
      object-fit: contain;
