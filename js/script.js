@@ -21,6 +21,8 @@ const checkAnswer = (e) => { // Funktion med en parameter (e)
         case ' svar 2': document.querySelector('#q2').style.display = 'flex'; // Viser elementet med id="q2"
         break;
         case ' svar 3': document.querySelector('#e1').style.display = 'flex'; // Viser elementet med id="e1"
+        document.getElementById('done').innerText = 'GODT KLARET! - Du gjorde det på ' + count + ' forsøg'; //sætter tekst og svar ind, i elementet med id'et 'done'
+        document.querySelector('#counter').style.display = 'none'; // gemmer forsøg tælleren i toppen, så tallet kun står i beskeden midt på skærmen
         break;
         case ' svar 2-1': document.querySelector('#e3').style.display = 'flex'; // Viser elementet med id="e3"
         break;
